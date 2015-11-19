@@ -3,3 +3,4 @@ dpkg -l
  ps -aux|grep mongo 查看进程
  # 通过启动命令检查MongoDB服务器状态
 ~  netstat -nlt|grep 27017
+ps -ef | grep redis
