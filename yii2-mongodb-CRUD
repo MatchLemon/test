@@ -1,0 +1,15 @@
+/** sort */
+
+ $query = new Query();
+$datas = $query->from('[tableName]')->select('[Attributes]')->where($condition)->orderBy($sort)->offset($offset)->limit($pageSize)->all();
+
+
+/*** update */
+    $module = module::findOne($id);
+    $module->id = 122;
+    $module->update();
+
+
+/*** count */
+
+module::find()->where($condition)->count();
