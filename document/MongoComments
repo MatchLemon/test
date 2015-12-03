@@ -1,0 +1,68 @@
+mongodump -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -o 文件存在路径 
+mongorestore -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 --drop 文件存在路径
+
+create database <user>
+ use user
+
+ insert data 
+ db.user.insert({id:'1',name:'book'});
+ delete
+ db.user.remove({id:'1'});
+
+ query data
+  db.find();
+  db.find().pretty()
+  db.find({},{name:'1'});查询name字段
+  db.find({id:'1'});
+
+  update
+
+  update命令格式：
+  db.collection.update(criteria,objNew,upsert,multi)
+  参数说明：
+  criteria：查询条件
+  objNew：update对象和一些更新操作符
+  upsert：如果不存在update的记录，是否插入objNew这个新的文档，true为插入，默认为false，不插入。
+  multi：默认是false，只更新找到的第一条记录。如果为true，把按条件查询出来的记录全部更新。
+
+  1.$inc
+  用法：{$inc:{field:value}}
+  作用：对一个数字字段的某个field增加value
+
+  2.$set
+  用法：{$set:{field:value}}
+  作用：把文档中某个字段field的值设为value
+
+  3.$unset
+  用法：{$unset:{field:1}}
+  作用：删除某个字段field
+
+  4.$push
+  用法：{$push:{field:value}}
+  作用：把value追加到field里。注：field只能是数组类型，如果field不存在，会自动插入一个数组类型
+
+  5.pushAll
+  用法：{$pushAll:{field:value_array}}
+  作用：用法同$push一样，只是$pushAll可以一次追加多个值到一个数组字段内。
+
+  6.$addToSet
+  用法：{$addToSet:{field:value}}
+  作用：加一个值到数组内，而且只有当这个值在数组中不存在时才增加。
+
+  7.$pop
+  用法：删除数组内第一个值：{$pop:{field:-1}}、删除数组内最后一个值：{$pop:{field:1}}
+  作用：用于删除数组内的一个值
+
+  8.$pull
+  用法：{$pull:{field:_value}}
+  作用：从数组field内删除一个等于_value的值
+
+  9.$pullAll
+  用法：{$pullAll:value_array}
+  作用：用法同$pull一样，可以一次性删除数组内的多个值。
+
+  10.$rename
+  用法：{$rename:{old_field_name:new_field_name}}
+  作用：对字段进行重命名
+
+  
