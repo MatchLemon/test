@@ -1,0 +1,59 @@
+更新说明( 2014-6-11更新 )：
+
+增加列表连播的示例 ListDemo;
+1.可以实现列表自动连播；
+2.可以实现列表界面的自定义。
+3.列表宽高完全自定义。
+4.效果很精美，代码很简洁。
+
+
+
+酷播迷你CuPlayerMiniV4.1  重要功能更新说明( 2013-7-5更新 )：
+1. 重写播放器基础架构；
+2. 修改播放器双击全屏功能；
+3. 修改显示视频略缩图功能；
+4. 支持flv,mp4,mov,f4v,3gp等视频格式；
+5. 优化视频比例问题；
+6. 新增配置文件功能，此功能将实现与asp,php,jsp,aspx程序更完美的结合；
+7. 支持双重参数功能，可适合普通用户和程序人员使用；
+8. 更加人性化的播放体验； 
+9. 支持FlashVars调用html代码中的参数；
+10. 支持自动播放/点击播放；
+11. 显示播放进度条，带预加载，支持拖动播放进度条；
+12. 显示视频总时长和当前播放进度的位置时间；
+13. 支持音量控制；
+14. 支持列表连播参数getNext，调用时直接在html中添加js的getNext函数即可； 
+15. 可以与动易、织梦、帝国等各类CMS系统结合，实现与此类CMS系统后台的融合
+ 
+
+
+参数名称 数据类型 参数描述 备注 
+CuPlayerSetFile String 配置文件地址 支持 .xml / .asp / .php / .aspx /. jsp 格式配置文件 
+CuPlayerFile String 视频文件地址 支持flv,mp4,mov,f4v,3gp格式视频文件 
+CuPlayerImage String 视频缩图  支持jpg,png,gif , 必须存在,否则将影响正常播放 
+CuPlayerWidth Number 播放器宽度 宽度值为像素 
+CuPlayerHeight Number 播放器高度 宽度值为像素 
+CuPlayerAutoPlay String 是否自动播放 值为yes / no 
+CuPlayerLogo String 用户Logo文件地址 推荐.png，支持jpg,png,gif 
+CuPlayerPosition String 用户Logo显示的位置 值为top-right / top-left / bottom-left / bottom-right 右上角/左上角/左下角/右下角 
+
+
+
+使用提示：
+
+重要：xml 目录下的示例是通用的，支持asp,php,aspx,jsp；
+
+
+
+1. 请把CuPlayer目录上传到你网站的根目录下
+
+2. 上传完毕后，可通过访问自带的测试页面，测试是否正常：
+
+    http://www.您的网站.com/CuPlayer/demo1.html
+
+3. 当以上任何一个可以正常打开，说明一切正常，就可以进行下一步的操作了。
+
+4. 参考例子中的写法，将代码复制到你实际应用的模版或页面中（注意相关文件地址
+   的路径，推荐用根地址或绝对地址的写法，不要用相对地址。）
+
+5. 一定要相关文件的地址（推荐用根地址或绝对地址的写法），以及要确定你服务器是不是支持flv,mp4的mime类型。

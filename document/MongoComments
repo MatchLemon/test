@@ -65,4 +65,8 @@ create database <user>
   用法：{$rename:{old_field_name:new_field_name}}
   作用：对字段进行重命名
 
-  
+复制数据库
+  db.copyDatabase("mydb", "temp", "127.0.0.1");
+
+克隆数据库
+ db.cloneDatabase(“127.0.0.1”); 将指定机器上的数据库的数据克隆到当前数据库
