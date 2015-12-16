@@ -4,3 +4,6 @@ dpkg -l
  # 通过启动命令检查MongoDB服务器状态
 ~  netstat -nlt|grep 27017
 ps -ef | grep redis
+
+如查看8888端口，则在终端中输入：
+lsof -i:8888 
