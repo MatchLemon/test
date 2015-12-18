@@ -1,5 +1,5 @@
 define(['directives/baseDirective'],function(module){
-    return module.directive('table',['$http',function($http){
+    return module.directive('myable',['$http',function($http){
         return {
             restrict:'A',
             scope:{

@@ -4,13 +4,24 @@
     <base href="/"></base>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/css1.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
 <body>
-    <div>
-        hello world
-    </div>
-    <div><input type="button" id='bt' value="submit" ui-sref="main"></div>
-    <div ui-view></div>
+    <div class="contain">
+        <div id="header">
+            <div class="tools"><a href="/dev/tool">Tool</a></div>
+
+            <div class="login-regist-area">
+                <ul class="ui-style header-unlogin">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                </ul>
+            </div>
+        </div>
+        <div ui-view></div>
+        <div class="mybody"></div>
+   
 </body>
 <script data-main="./main" src="./module/bower/require.js"></script>
 </html>

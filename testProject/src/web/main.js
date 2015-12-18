@@ -6,7 +6,8 @@ require.config({
         angular : jsUrl + 'angular',
         app : 'app',
         angularUIRouter : jsUrl + 'angular-ui-router' ,
-        angularLazyLoad: jsUrl + 'angular-couch-potato'
+        angularLazyLoad: jsUrl + 'angular-couch-potato',
+        angularFileUpload: jsUrl + 'angular-file-upload',
     },
     shim: {
             angular: {
@@ -14,6 +15,7 @@ require.config({
             },
             angularUIRouter: ['angular'],
             angularLazyLoad: ['angular'],
+            angularFileUpload:['angular']
         },
     deps:['bootStrap']
 });

@@ -2,12 +2,15 @@ define([
     'angular' ,
     'angularLazyLoad',
     'angularUIRouter',
+    'angularFileUpload',
     'service/commonService',
-    'directives/listDirective'
+    'directives/listDirective',
+    'directives/demoDirective'
     ], function(angular, angularLazyLoad){
     var app = angular.module('Ag',[
         'ui.router', 
         'scs.couch-potato',
+        'angularFileUpload',
         'Ag.service',
         'Ag.directive',
         ]);
@@ -27,8 +30,14 @@ define([
             }).
             state('main',{
                 url:'/main',
-                templateUrl:"partials/main.html"
-
+                views:{
+                    "":{
+                        templateUrl: "partials/dev/tool.html"
+                        },
+                    "test@main":{
+                        templateUrl:"partials/main.html"
+                    }
+                }
             }).
             state('list',{
                 url:'/list',
@@ -40,6 +49,42 @@ define([
                             ])
                         }
 
+            }).
+            state('demo',{
+                url:'/demo',
+                templateUrl:'partials/demo.html',
+                controller: 'demoController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/demoController', 
+                            ])
+                        }
+
+            }).
+            state("dev/tool", {
+                url: "/dev/tool",
+                views:{
+                    "":{
+                        templateUrl: "partials/dev/tool.html"
+                        },
+                    "test@dev/tool":{
+                        templateUrl:"partials/main.html"
+                    }
+
+                }
+               
+            }).
+            state("upload", {
+                url: "/upload",
+                templateUrl: "partials/upload.html",
+                controller: 'uploadController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/uploadController', 
+                            ])
+                        }
+
+               
             })
         }]);
 
