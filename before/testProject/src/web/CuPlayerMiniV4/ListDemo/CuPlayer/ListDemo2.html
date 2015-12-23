@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>酷播迷你V4.0(免费播放器自动列表功能)演示</title>
+<meta name="keywords" content="酷播迷你V4免费播放自动列表功能" />
+<meta name="description" content="酷播迷你V4免费播放自动列表功能，新增配置文件功能，此功能将实现与asp,php,jsp,aspx程序更完美的结合" />
+<style type="text/css">
+<!--
+div { line-height:26px; font-size:14px;}
+body { background:#ffffff url(CuPlayerBg.jpg); padding:10px;margin:10px;} 
+div,ul,li,ol,dl,dt,dd,form,img,p{margin: 0; padding: 0; border: 0; }
+li{list-style-type:none;} 
+/* myplayer */
+div#myplayer { width:435px;border:1px #cccccc solid; clear:both;  background:#ffffff; clear:both; height:580px;}
+
+ul.mylist { width:100%; text-align:left;font-size:12px; }
+ul.mylist li { padding:1px 0; line-height:24px;height:24px; border-top:1px #efefef solid; }
+ul.mylist li.on { background:#efefef;}
+ul.mylist li a,ul.mylist li a:link,ul.myllist li a:visited{ padding:0px 6px 0px 30px; overflow:hidden; line-height:24px;height:24px;display:block;  background:url(Images/Vico.jpg) no-repeat 6px 6px; text-decoration:none; color:#666666;}
+ul.mylist li a:hover{ color:#cc0000; background:#efefef url(Images/Vico.jpg) no-repeat 6px 6px; }
+
+div#CuPlayer { width:425px;float:left;margin-left:5px;margin-top:10px;}
+div.list { width:400px;float:left;margin-top:10px;margin-left:10px;}
+
+div.list dl img{ width:70px;height:50px; float:left;}
+div.list dl strong { display:block; width:290px;float:left; padding-left:8px;}
+div.list dl span { display:block; width:190px;float:left; padding-left:8px;}
+
+div.list dl dt { width:390px;float:left; }
+div.list dl dt a { display:block; line-height:18px;padding-top:10px;  border-bottom:1px #cccccc solid; 
+ height:65px; padding-top:10px; color:#333; font-size:12px; text-decoration:none; }
+div.list dl dt a:hover{  height:65px; padding-top:10px;  text-decoration:none; background:#efefef; }
+-->
+</style>
+
+</head>
+<body>
+<!--myplayer/begin-->
+<div id="myplayer">
+  <!--酷播迷你 CuPlayerMiniV4.0 代码开始-->
+  <script type="text/javascript" language="javascript" src="images/jquery-1.4.3.min.js"></script>
+  <script type="text/javascript" src="Images/swfobject.js"></script>
+  <div id="CuPlayer" > <strong>提示：您的Flash Player版本过低，请<a href="http://www.CuPlayer.com/" >点此进行播放器升级</a>！</strong> </div>
+  <div class="list" style="height:267px;overflow-x:hidden;overflow-y:auto" >
+  <dl>
+  <dt><a href="#" onclick="changeStream(0);"><img src="images/p1.jpg" /><strong>11达利园青梅绿茶宣传广告梅绿茶宣告</strong><span>发布日期：2014.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(1);"><img src="images/p2.jpg" /><strong>22达利园青梅绿茶宣传广告梅</strong><span>发布日期：2014.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(2);"><img src="images/p3.jpg" /><strong>33达利园青梅绿茶宣传广告梅绿茶宣告</strong><span>发布日期：2014.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(3);"><img src="images/p4.jpg" /><strong>44达利园青梅绿茶宣传广告梅绿茶</strong><span>发布日期：2014.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(4);"><img src="images/p2.jpg" /><strong>55达利园青梅绿茶宣传广告梅</strong><span>发布日期：2014.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(5);"><img src="images/p3.jpg" /><strong>66达利园青梅绿茶宣传广告梅绿茶宣告</strong><span>发布日期：2014.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(6);"><img src="images/p4.jpg" /><strong>77达利园青梅绿茶宣传广告梅绿茶</strong><span>发布日期：2014.03.25</span></a></dt>
+  </dl>
+  </div>
+  
+<script type=text/javascript>
+<!--
+//酷播迷你V4：官方连播代码示例20140611//
+var CuPlayerList ="http://www.suning.cn/snsite/uploadfile/video/20130721/52f79ff6.flv|http://www.suning.cn/snsite/uploadfile/video/20130722/d6c689c0.flv|http://www.suning.cn/snsite/uploadfile/video/20130722/a5e8262e.flv|http://www.suning.cn/snsite/uploadfile/video/20130722/2ca74f99.flv|http://www.suning.cn/snsite/uploadfile/video/20130722/a5e8262e.flv|http://www.suning.cn/snsite/uploadfile/video/20130722/2ca74f99.flv|http://www.suning.cn/snsite/uploadfile/video/20130722/2ca74f99.flv"
+var sp =CuPlayerList.split("|")  
+var num = sp.length;
+var video_index = 0;
+function getNext(pars)
+{	
+  if(video_index < num-1)
+	{ 
+		video_index++;
+		so.addVariable("CuPlayerFile",sp[video_index]);
+		so.addVariable("CuPlayerAutoPlay","yes"); //是否自动播放
+		so.write("CuPlayer");	
+	}
+	else
+	{
+	video_index = 0;
+	so.addVariable("CuPlayerFile",sp[video_index]);
+	so.write("CuPlayer");	
+	}
+	$(".list dl dt a").css("background","#ffffff").css("color","#333");
+	$(".list dl dt a").eq(video_index).css("background","#efefef").css("color","red");
+	LeftScr(video_index);
+}
+function changeStream(CuPlayerFile){
+$(".list dl dt a").css("background","#ffffff").css("color","#333");
+$(".list dl dt a:hover").css("background","#efefef").css("color","red");
+LeftScr(CuPlayerFile);
+so.addVariable("CuPlayerFile",sp[CuPlayerFile]);
+so.addVariable("CuPlayerAutoPlay","yes"); //是否自动播放
+so.write("CuPlayer");	
+return false;
+}
+CuPlayerFile =sp[video_index];
+$(".list dl dt a").css("background","#ffffff").css("color","#333");
+$(".list dl dt a").eq(video_index).css("background","#efefef").css("color","red");
+var so = new SWFObject("CuPlayerMiniV4.swf","ply","420","285","9","#000000");
+so.addParam("allowfullscreen","true");
+so.addParam("allowscriptaccess","always");
+so.addParam("wmode","opaque");
+so.addParam("quality","high");
+so.addParam("salign","lt");
+so.addVariable("CuPlayerFile",CuPlayerFile);
+so.addVariable("CuPlayerSetFile","CuPlayerSetFile.xml"); //* 必须存在/播放器配置文件地址
+so.addVariable("CuPlayerImage","images/start.jpg");//* 必须存在/视频略缩图,本图片文件必须正确
+so.addVariable("CuPlayerWidth","420"); //视频宽度
+so.addVariable("CuPlayerHeight","285"); //视频高度
+so.addVariable("CuPlayerAutoPlay","yes"); //是否自动播放
+//so.addVariable("CuPlayerLogo","logo.png"); //Logo文件地址
+so.addVariable("CuPlayerPosition","bottom-right"); //Logo显示的位置
+so.write("CuPlayer");	
+
+function LeftScr(m){
+	var scrtop;
+	if(m>1){
+	scrtop=55*(m-1);
+	}else{
+		scrtop=0;
+		}
+	$(".list").animate({
+		scrollTop:scrtop
+		},130);
+	}
+//-->
+</script>
+  <!--酷播迷你 CuPlayerMiniV4.0 代码结束-->
+</div>
+<!--myplayer/end-->
+
+<h1><strong>酷播迷你V4.0免费网页播放器(列表功能)演示</strong></h1>
+ 
+<!-- help/Bgein -->
+<div class="help">
+ <p>
+        <strong>播放器使用环境及注意事项：</strong><br />
+        *  请用户在IIS下或其它网站环境下使用；<br />
+        *  请确认您的环境是否支持支持flv,mp4等视频文件的mime类型，<a href="http://www.cuplayer.com/player/Help/2011/0625/83.html" target="_blank" class="cOrange">详细参见&gt;&gt;</a>；<br />
+        *  播放器在使用过程中，支持加载XML(asp,php,jsp,aspx)等格式配置文件；<br />
+        * 请确认播放器相关的文件地址是否正确。
+        <br />
+        <strong>遇到问题如何获得帮助：</strong>        <br />
+        * 官方应用文档：<a href="http://www.cuplayer.com/Cu/CuPlayerMiniV4/help/index.html" target="_blank" class="cOrange">http://www.CuPlayer.com/Cu/CuPlayerMiniV4/help/index.html</a> <br />
+        * 官方客服：QQ / <strong class="cRed2">176797520</strong> (验证须注明&ldquo;极酷&rdquo;字样)  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=176797520&site=qq&menu=yes"><img src="http://wpa.qq.com/pa?p=2:176797520:41 &r=0.7833309615211892" alt="极酷FlvPlayer在线客服" border="0" align="absmiddle" title="点击这里给我发消息"></a><br />
+        <strong>如何正确的向客服提问？</strong> <br />
+    A:请将您的测试页上传到您的某个网站目录下，然后把测试页地址发给客服<br />
+    （如果您无法提供测试页地址，很多问题，无法协助您找出更准确的原因）； <br />
+  B:请尽可能的把问题，表述清楚。 <br />
+ <strong>酷播迷你V4官方网站：</strong> <a href="http://www.cuplayer.com/Cu/CuPlayerMiniV4/" target="_blank">http://www.cuplayer.com/Cu/CuPlayerMiniV4/</a></p>
+</div>
+<!-- help/End --></body>
+</html>
+
+

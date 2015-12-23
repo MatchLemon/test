@@ -85,6 +85,18 @@ define([
                         }
 
                
+            }).
+            state("progress", {
+                url: "/progress",
+                templateUrl: "partials/progress-bar.html",
+                controller: 'progressController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/progressController', 
+                            ])
+                        }
+
+               
             })
         }]);
 

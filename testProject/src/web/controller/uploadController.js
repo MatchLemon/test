@@ -18,7 +18,13 @@ define(['app'],function(app){
           file = files[_i];
           fileName = file + file.name + ';';
         }*/
-       
+       reader = new FileReader();
+        reader.readAsDataURL($scope.files[0]);
+            reader.onload = function(loadEvent) {
+              
+                $scope.image = loadEvent.target.result;
+                $scope.$apply();
+              }
         }
 
         $scope.uploadFile=function(){
@@ -27,16 +33,16 @@ define(['app'],function(app){
             reader.onload = function(loadEvent) {
                 console.log(loadEvent.target.result);
                 var param={
-                    "file":"123456",
+                    "file":loadEvent.target.result,
                     "account":"heyman"
                 }
                 //x-www-form-urlencoded
                 $http({
-                  url: "http://localhost:8889/Test/upload",
+                  url: "http://localhost:8080/api/Test/upload",
                   method: 'POST',
                   headers: {
                     
-                      'Content-Type': 'application/json'
+                      'Content-Type': 'x-www-form-urlencoded'
                   },
                   data: param,
                 }).success(function(data){
