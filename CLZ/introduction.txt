@@ -1,0 +1,68 @@
+About Graduation
+
+Subject name : Cloud Learning Zone (CLZ)
+
+1. 需求
+  1. 视频播放, 观看进度, 观看该课的人列表,
+  3, 关于课程的质料,文档之类的,资料下载
+  4, 课堂笔记, 可以发表.分享,(类似于博客)
+  5, 讨论木块, 社区,(大家一起)
+  6, 问题求助
+
+2015-12-24 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Develope Environment
+    service Nginx + tomcate
+
+IDE 
+    Eclipse
+
+Database
+    MySQL
+
+Framework
+    frontend: angularjs + jquery
+    backend : SpringMVC + hibernate
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DataBase Requirement Design
+
+=============================
+user table  
+
+user_id
+name 
+birthday
+mobile
+email
+address
+sex
+role
+============================
+role table
+
+id 
+name 
+destription
+
+============================
+video table 
+
+video_id 
+name
+url
+duration
+title
+
+============================
+course table
+
+course_id 
+name
+descirption
+img
+user
+
+
