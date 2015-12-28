@@ -19,10 +19,12 @@ define([
    angularLazyLoad.configureApp(app);
 
 
-    app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$couchPotatoProvider',
-        function ($stateProvider, $urlRouterProvider, $locationProvider, $couchPotatoProvider) {
+    app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$couchPotatoProvider','$httpProvider',
+        function ($stateProvider, $urlRouterProvider, $locationProvider, $couchPotatoProvider,$httpProvider) {
         $locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise('/login');
+        $httpProvider.interceptors.push('myInterceptor');
+
         $stateProvider
             .state("login", {
                 url: "/login",
@@ -100,6 +102,29 @@ define([
             })
         }]);
 
+app.factory('myInterceptor', ['$q', function($q) {
+    var isService=false;
+    var responseInterceptor = {
+          request: function(config) {
+            var url = config.url;
+            isService  = url.indexOf("api") == -1 ? false : true;
+            console.log(config);
+
+            return config;
+          },
+          response: function(response) {
+            var deferred = $q.defer();
+                deferred.resolve(response);
+           if (isService){
+            console.log(response);
+           }
+            
+            return deferred.promise;
+        }
+    };
+
+    return responseInterceptor;
+}]);
     //lazy config
     app.run(['$couchPotato', function($couchPotato) {
        app.lazy = $couchPotato;

@@ -1,0 +1,18 @@
+線程通信;更新主線程的UI
+
+子線程
+
+ Message msg = refreshHander.obtainMessage();
+        　msg.obj = userVo;
+        refreshHander.sendMessage(msg);
+主線程:
+  private Handler refreshHander = new Handler() {
+
+        @Override
+        public void handleMessage(Message msg) {
+            user = (UserVo) msg.obj;
+            refresh(user);
+           // loadRegistDate();
+            loadDialog.dismiss();
+        }
+    };
