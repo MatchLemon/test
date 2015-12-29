@@ -102,32 +102,42 @@ define([
             })
         }]);
 
-app.factory('myInterceptor', ['$q', function($q) {
-    var isService=false;
-    var responseInterceptor = {
-          request: function(config) {
-            var url = config.url;
-            isService  = url.indexOf("api") == -1 ? false : true;
-            console.log(config);
+    app.factory('myInterceptor', ['$q', '$location', function($q, $location) {
+        var isService=false;
+        var responseInterceptor = {
+              request: function(config) {
+                var url = config.url;
+                isService  = url.indexOf("api") == -1 ? false : true;
+                //console.log(config);
 
-            return config;
-          },
-          response: function(response) {
-            var deferred = $q.defer();
-                deferred.resolve(response);
-           if (isService){
-            console.log(response);
-           }
-            
-            return deferred.promise;
-        }
-    };
+                return config;
+              },
+              response: function(response) {
+                var deferred = $q.defer();
+                    deferred.resolve(response);
+               if (isService){
+                   // $location.path('/login');
+                   // console.log(response);
+                   // return ;
+               }
+                
+                return deferred.promise;
+            }
+        };
 
     return responseInterceptor;
 }]);
     //lazy config
-    app.run(['$couchPotato', function($couchPotato) {
+    app.run(['$couchPotato','$rootScope', 'commonService', '$location', function($couchPotato, $rootScope, commonService, $location) {
        app.lazy = $couchPotato;
+         $rootScope.$on('$stateChangeStart', function(event, next, params) {
+                var permission = (commonService.getUser() !== undefined);
+                   console.log( commonService.md5("123456"));
+
+                if (!permission) {
+                    //$location.path('/login');
+                }
+            });
     }]);
 
 return app;

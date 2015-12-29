@@ -22,8 +22,8 @@ define(['app'],function(app){
         reader.readAsDataURL($scope.files[0]);
             reader.onload = function(loadEvent) {
               
-                $scope.image = loadEvent.target.result;
-                $scope.$apply();
+               /* $scope.image = loadEvent.target.result;
+                $scope.$apply();*/
               }
         }
 
@@ -33,7 +33,7 @@ define(['app'],function(app){
             reader.onload = function(loadEvent) {
                 console.log(loadEvent.target.result);
                 var param={
-                    "file":loadEvent.target.result,
+                    "file":"",
                     "account":"heyman"
                 }
                 //x-www-form-urlencoded
@@ -41,7 +41,6 @@ define(['app'],function(app){
                   url: "http://localhost:8080/api/Test/upload",
                   method: 'POST',
                   headers: {
-                    
                       'Content-Type': 'x-www-form-urlencoded'
                   },
                   data: param,

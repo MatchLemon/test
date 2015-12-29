@@ -8,6 +8,7 @@ require.config({
         angularUIRouter : jsUrl + 'angular-ui-router' ,
         angularLazyLoad: jsUrl + 'angular-couch-potato',
         angularFileUpload: jsUrl + 'angular-file-upload',
+        md5:jsUrl +'md5.min',
     },
     shim: {
             angular: {
