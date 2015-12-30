@@ -9,6 +9,7 @@ require.config({
         angularLazyLoad: jsUrl + 'angular-couch-potato',
         angularFileUpload: jsUrl + 'angular-file-upload',
         md5:jsUrl +'md5.min',
+        uiBootStrap: jsUrl + 'ui-bootstrap-tpls.min',
     },
     shim: {
             angular: {
@@ -16,6 +17,7 @@ require.config({
             },
             angularUIRouter: ['angular'],
             angularLazyLoad: ['angular'],
+            uiBootStrap: ['angular'],
             angularFileUpload:['angular']
         },
     deps:['bootStrap']

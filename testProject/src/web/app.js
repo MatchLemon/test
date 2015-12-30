@@ -3,6 +3,7 @@ define([
     'angularLazyLoad',
     'angularUIRouter',
     'angularFileUpload',
+    'uiBootStrap',
     'service/commonService',
     'directives/listDirective',
     'directives/demoDirective'
@@ -13,6 +14,7 @@ define([
         'angularFileUpload',
         'Ag.service',
         'Ag.directive',
+        'ui.bootstrap',
         ]);
     
     //lazy load

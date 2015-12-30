@@ -1,11 +1,21 @@
-define(['app'],function(app){
-    return app.registerController('uploadController',['$scope','$http',function($scope, $http){
+define(['app','./dialogController'],function(app){
+    return app.registerController('uploadController',['$scope','$http','$modal',function($scope, $http, $modal){
         $scope.onFileSelect = function($files) {    //$files: an array of files selected, each file has name, size, and type.
             for (var i = 0; i < $files.length; i++) {
                 
             }
         }
 
+        $scope.import = function(){
+          var modalInstance;
+          return modalInstance = $modal.open({
+          templateUrl: '/partials/dialog.html',
+          controller: 'dialogController',
+          windowClass: 'setting-dialog'
+        }).result.then(function(data) {
+          alert(data);
+        });
+        }
         $scope.upload=function(files){
             console.log(files);
             $scope.files = files;

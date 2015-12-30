@@ -68,3 +68,41 @@
      background-color: #286090;
      border-color: transparent;
 }
+
+/* DIALOG */
+.setting-dialog .modal-dialog {
+    width: 500px;
+    height: 484px; 
+    bottom: 0; 
+    left: 0;
+    margin: 10% auto 2%;
+    position: absolute;
+    right: 0; 
+    top: 0;
+}
+
+.modal-backdrop {
+    background-color: #211b1a;
+    bottom: 0;
+}
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
