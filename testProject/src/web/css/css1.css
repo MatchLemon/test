@@ -32,7 +32,7 @@ li{
     float: left;
 }
 
-.header-unlogin a{
+.header-unlogin a,.nav-bar a{
     display: block;
     width: 60px;
     font-size: 14px;
@@ -40,6 +40,26 @@ li{
     height: 60px;
     line-height: 60px;
     color: #fff;
+}
+.logined li > a {
+     display: block;
+    width: 60px;
+    font-size: 14px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+}
+.user-card-item img {
+    width: 28px;
+    height: 28px;
+    border-color: #4d5559;
+    vertical-align: middle;
+    border-radius: 22px;
+    border: 2px solid #adb0b1;
+}
+#header ul{
+display: inline;
 }
 
 :link, :visited {
@@ -54,6 +74,12 @@ li{
     margin-right: 20px;
 }
 
+#header .logo-content{
+  width: 130px;
+  float: left;
+  display: inline-block;
+  height: 1px;
+}
 .tools a {
     display: block;
     width: 60px;

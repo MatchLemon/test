@@ -70,7 +70,7 @@
 }
 
 /* DIALOG */
-.setting-dialog .modal-dialog {
+ .setting-dialog .modal-dialog {
     width: 500px;
     height: 484px; 
     bottom: 0; 
@@ -105,4 +105,19 @@
     z-index: 1040;
     -webkit-overflow-scrolling: touch;
     outline: 0;
+} 
+input[type=submit]{
+    outline:none;
+
+}
+input[type=text],input[type=password]{
+        outline-color:#3579a6;
+}
+::-moz-focus-inner{border:0px;}
+
+.color-blue{
+    background: #3579a6;
+}
+ul{
+    ist-style: none;
 }

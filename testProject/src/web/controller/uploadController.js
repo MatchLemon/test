@@ -11,9 +11,10 @@ define(['app','./dialogController'],function(app){
           return modalInstance = $modal.open({
           templateUrl: '/partials/dialog.html',
           controller: 'dialogController',
-          windowClass: 'setting-dialog'
+          windowClass: 'setting-dialog',
+          backdrop:"static",
         }).result.then(function(data) {
-          alert(data);
+          console.log(data);
         });
         }
         $scope.upload=function(files){
