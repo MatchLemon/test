@@ -21,6 +21,10 @@
 *, :after, :before {
     box-sizing: border-box;
 }
+body{
+    font-size: 14px;
+    min-width: 700px
+}
 
 .btn-green {
     color: #ffffff;
@@ -120,4 +124,34 @@ input[type=text],input[type=password]{
 }
 ul{
     ist-style: none;
+}
+.clearfix:after, .clearfix:before {
+    content: " ";
+    display: table;
+}
+.clearfix:after { 
+
+  clear: both; 
+
+} 
+.tabs{
+    
+    border-bottom: 2px solid #000000;
+}
+.tab {
+    float: left;
+    margin-bottom: -1px;
+    color: #a8b6c7;
+    cursor: pointer;
+    border: 0;
+    padding: 2px 1px;
+    word-spacing: 5px;
+    margin-right: 44px;
+    font-size: 16px;
+}
+
+.tab.active, .tab:hover {
+    background-color: #fff;
+    color: #000000;
+    border-bottom: 3px solid #000000;
 }

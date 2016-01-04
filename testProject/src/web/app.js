@@ -6,7 +6,9 @@ define([
     'uiBootStrap',
     'service/commonService',
     'directives/listDirective',
-    'directives/demoDirective'
+    'directives/demoDirective',
+    'directives/tabsDirective',
+    'directives/toTopDirective'
     ], function(angular, angularLazyLoad){
     var app = angular.module('Ag',[
         'ui.router', 
@@ -101,6 +103,18 @@ define([
                         }
 
                
+            }).
+            state("tabs", {
+                url: "/tabs",
+                templateUrl: "partials/demoTab.html",
+                controller: 'tabsController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/tabsController', 
+                            ])
+                        }
+
+               
             })
         }]);
 
@@ -141,6 +155,13 @@ define([
                 }
             });
     }]);
+
+    window.onscroll = function(){ 
+    var t = document.documentElement.scrollTop || document.body.scrollTop;  
+    if( t > 200 ){
+        $(".")
+    }
+}
 
 return app;
 });
