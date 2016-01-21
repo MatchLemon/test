@@ -17,6 +17,9 @@ define(['directives/baseDirective'],function(module){
                     curTab = parseInt($location.search().active);
                       
                     scope.curTab = (!isNaN(curTab) ? curTab : 0);
+                    console.log(scope.curTab);
+                         
+
                     return scope.tabs[scope.curTab].active = true;
                  });
                    

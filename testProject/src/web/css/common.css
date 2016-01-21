@@ -23,7 +23,8 @@
 }
 body{
     font-size: 14px;
-    min-width: 700px
+    min-width: 700px;
+      font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
 }
 
 .btn-green {
@@ -123,7 +124,7 @@ input[type=text],input[type=password]{
     background: #3579a6;
 }
 ul{
-    ist-style: none;
+    list-style: none;
 }
 .clearfix:after, .clearfix:before {
     content: " ";
@@ -154,4 +155,20 @@ ul{
     background-color: #fff;
     color: #000000;
     border-bottom: 3px solid #000000;
+}
+a, input, button {
+    outline: none;
+}
+
+ul{
+    list-style: none;
+}
+
+li, .l {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
 }

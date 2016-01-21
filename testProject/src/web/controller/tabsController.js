@@ -18,11 +18,11 @@ define(['app'],function(app){
     $scope.tabs1Show = true;
     $scope.tabs2Show = false;
     $scope.tabs3Show = false;
-
+     
    
     $scope.changTab = function (){
-        curTab = parseInt($location.search().active);
-        alert("41444");
+        curTab = parseInt($location.search().active == undefined ? 0 : $location.search().active );
+        curTab = (!isNaN(curTab) ? curTab : 0)
         if (curTab == 0) {
             $scope.tabs1Show = true;
             $scope.tabs2Show = false;
@@ -38,5 +38,7 @@ define(['app'],function(app){
             $scope.tabs3Show = true;
         }
     }
+
+    $scope.changTab();
     }])
 });

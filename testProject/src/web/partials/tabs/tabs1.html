@@ -1,1 +1,39 @@
-<div ng-show="tabs1Show">tabs1.html</div>
+<div ng-show="tabs1Show">
+    <div class="course-list">
+        <h1 align="center">tab1</h1>
+        <div class="course-category">
+            <div class="course-category-hd">
+                <span>全部课程</span>
+            </div>
+            <div class="course-row-category">
+                <span class="hd l">全部分类：</span>
+                <ul>
+                    <li class="category-item "><a class="selected">后端开发</a></li>
+                    <li class="category-item"><a>XX开发</a></li>
+                    <li class="category-item"><a href="www.baidu.com">移动开发</a></li>
+                </ul>
+            </div>
+            <div class="course-row-category">
+                 <ul>
+                    <li class="category-item "><a >Java</a></li>
+                    <li class="category-item"><a class="selected">PHP</a></li>
+                    <li class="category-item"><a href="www.baidu.com">C#</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="course-tool-bar"></div>
+        <div class="video-context">
+            <ul class="clearfix video-list">
+                <li class="video-item" ng-repeat="a in [1,2,3,4,5,6,7,8,9]">
+                    <a href="">
+                        <img src="../images/20160105.jpg" alt="Java基础视频精华版" width="283" height="186">
+                    </a>
+                    <div class="video-desc">
+                        <h3><a href="/" class="afont">Java基础视频精华版Java基础视频精华版Java基础视频精华版</a></h3>
+                        <p>已经有<strong>20502</strong>人学习</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

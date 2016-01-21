@@ -115,6 +115,17 @@ define([
                         }
 
                
+            }).
+            state('course-detail',{
+                url:'/course-detail',
+                templateUrl:'partials/course-detail.html',
+                controller: 'courseDetailController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/courseDetailController', 
+                            ])
+                        }
+
             })
         }]);
 
