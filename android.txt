@@ -1,5 +1,6 @@
 線程通信;更新主線程的UI
 
+
 子線程
 
  Message msg = refreshHander.obtainMessage();
