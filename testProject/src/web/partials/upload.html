@@ -8,4 +8,10 @@
 
 </form>
 
+<form ng-submit="uploadFileBinary()">
+<h1>uploadFileBinary</h1>
+    <div id="upload" style="width:100px;height:20px;background:yellow"  ng-file-select ng-file-change="upload($files)" multiple="true" ng-model="file">Click Upload</div>
+    <input type="submit" value="Submit" class="btn btn-success">
+</form>
+
  <a href="#" class="btn btn-green" ng-click="import()" > Import</a>

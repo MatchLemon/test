@@ -1,5 +1,5 @@
 define(['app','./dialogController'],function(app){
-    return app.registerController('uploadController',['$scope','$http','$modal',function($scope, $http, $modal){
+    return app.registerController('uploadController',['$scope','$http','$modal','$upload',function($scope, $http, $modal, $upload){
         $scope.onFileSelect = function($files) {    //$files: an array of files selected, each file has name, size, and type.
             for (var i = 0; i < $files.length; i++) {
                 
@@ -29,13 +29,13 @@ define(['app','./dialogController'],function(app){
           file = files[_i];
           fileName = file + file.name + ';';
         }*/
-       reader = new FileReader();
-        reader.readAsDataURL($scope.files[0]);
+    /*  reader = new FileReader();
+      reader.readAsDataURL($scope.files[0]);
             reader.onload = function(loadEvent) {
               
-               /* $scope.image = loadEvent.target.result;
-                $scope.$apply();*/
-              }
+                $scope.image = loadEvent.target.result;
+                $scope.$apply();
+              }*/
         }
 
         $scope.uploadFile=function(){
@@ -58,11 +58,53 @@ define(['app','./dialogController'],function(app){
                 }).success(function(data){
                 alert(data);
                 });
-            };
-
-
-          
+            };      
         }
+
+        $scope.uploadFileBinary = function() {
+            //reader = new FileReader();
+           /* reader.readAsBinaryString($scope.files[0]);
+            reader.onload = function(loadEvent) {
+              console.log("reader finish");
+              _submitData(loadEvent.target.result);
+            }*/
+            _submitData($scope.files[0]);
+        }
+  /*  function _submitData(file) {
+        var body={
+                  "file":"55",
+                  "account":"heyman"
+            }
+        var formData = new FormData();
+        formData.append("file",file);
+       $http({
+              url: "http://localhost:8080/api/SZ/upload",
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/form-data'
+              },
+              data: formData,
+            }).success(function(data){
+            alert(data);
+            });
+    }*/
+    function _submitData(file) {
+      var body={
+                  "file":"55",
+                  "account":"heyman"
+            }
+
+      $upload.upload({
+      url:'http://localhost:8080/api/SZ/upload',
+      file:file,
+      data: body
+      }).progress(function(evt) { 
+         console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
+        }).success(function(data, status, headers, config) {        // file is uploaded successfully
+          console.log(data);
+        });  ;
+      }
+   
     }])
 
 })
