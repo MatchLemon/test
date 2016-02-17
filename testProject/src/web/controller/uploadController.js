@@ -1,4 +1,4 @@
-define(['app','./dialogController'],function(app){
+define(['app', 'config', './dialogController'],function(app, config){
     return app.registerController('uploadController',['$scope','$http','$modal','$upload',function($scope, $http, $modal, $upload){
         $scope.onFileSelect = function($files) {    //$files: an array of files selected, each file has name, size, and type.
             for (var i = 0; i < $files.length; i++) {
@@ -95,7 +95,7 @@ define(['app','./dialogController'],function(app){
             }
 
       $upload.upload({
-      url:'http://localhost:8080/api/SZ/upload',
+      url:config.hostnamePort + '/api/SZ/upload',
       file:file,
       data: body
       }).progress(function(evt) { 

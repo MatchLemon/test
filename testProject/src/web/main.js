@@ -10,6 +10,7 @@ require.config({
         angularFileUpload: jsUrl + 'angular-file-upload',
         md5:jsUrl +'md5.min',
         uiBootStrap: jsUrl + 'ui-bootstrap-tpls.min',
+        ngFileUpload: jsUrl +"ng-file-upload-bower-12.0.1/ng-file-upload"
     },
     shim: {
             angular: {
@@ -18,7 +19,8 @@ require.config({
             angularUIRouter: ['angular'],
             angularLazyLoad: ['angular'],
             uiBootStrap: ['angular'],
-            angularFileUpload:['angular']
+            angularFileUpload:['angular'],
+            ngFileUpload:['angular']
         },
     deps:['bootStrap']
 });

@@ -316,3 +316,137 @@ display: inline;
     border-left: 1px solid #d0d6d9;
     cursor: default;
 }
+ .course-bd .catalog-list {
+
+}
+.catalog-list .chapter-icon{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 5px 0 0 0;
+    background: url(../images/course_info_sprit.png) no-repeat 0 -106px;
+}
+.catalog-list .item-right{
+    position: relative;
+    margin-left: 60px;
+    float: none;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.catalog-list .chapter-name {
+        font-weight: bold;
+        font-size: 16px;
+    }
+.catalog-list .desc {
+    line-height: 24px;
+    font-size: 12px;
+    color: #787d82;
+}
+
+ .course-bd .course-evaluate {
+    margin-top: 30px;
+    border-top: 1px solid #d0d6d9;
+    padding-top: 40px;
+}
+
+.course-evaluate .evaluat-class {
+    border-bottom: 1px solid #edf1f2;
+    padding-bottom: 30px;
+}
+.course-evaluate .evaluate-item {
+    position: relative;
+    padding: 24px 0 0 60px;
+}
+.course-evaluate  .img-box{
+    position: absolute;
+    top: 26px;
+    left: 0;
+    background-color: #d0d6d9;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.img-box img{
+    display: block;
+    height: 100%;
+}
+.evaluate-content span{
+    display: block;
+}
+.evaluate-content .evaluate-time {
+    margin-top: 10px;
+    color: #b5b9bc;
+    font-size: 12px;
+    line-height: 20px;
+}
+.evaluate-des{
+    line-height: 28px;
+    font-size: 14px;
+    color: #14191e;
+    text-align: left;
+    margin-top: 8px;
+    word-break: break-all;
+}
+
+/* course catalog answer */
+.course-info-main {
+    margin: 40px 5% 5% 5%;
+}
+.course-info-main .pregress-height {
+    height: 10px;
+    width: 60%;
+}   
+.course-info-main .progress-part strong {
+     font-size: 32px;
+}
+.course-info-main .finished-title{
+    font-size: 16px;
+    color: #14191E;
+}
+.chapter .state-expand-icon {
+    background-image: url('../images/learnicon.png?v3.1');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.chapter h3 {
+    height: 40px;
+    line-height: 40px;
+    padding-right: 13px;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.chapters .chapter strong {
+    display: block;
+    padding: 0 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    margin-right: 20px;
+    text-overflow: ellipsis;
+}
+.chapters .chapter .state-expand-icon {
+    background-position: 0 -37px;
+}
+.video>li a{
+    background: url('../images/learnicon.png?v3.1') no-repeat 0 -132px;
+}
+.chapters .chapter .video li a {
+    color: #787d82;
+    display: block;
+    overflow: hidden;
+    padding: 0 0 0 20px;
+    word-break: break-all;
+}
+.video {
+    margin-left: 38px;
+}
+.chapters .chapter .video li:hover {
+    background: #edf1f2;
+}

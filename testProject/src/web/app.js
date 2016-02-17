@@ -3,6 +3,7 @@ define([
     'angularLazyLoad',
     'angularUIRouter',
     'angularFileUpload',
+    'ngFileUpload',
     'uiBootStrap',
     'service/commonService',
     'directives/listDirective',
@@ -17,6 +18,7 @@ define([
         'Ag.service',
         'Ag.directive',
         'ui.bootstrap',
+        'ngFileUpload',
         ]);
     
     //lazy load
@@ -126,7 +128,31 @@ define([
                             ])
                         }
 
+            }).
+            state('ngUploadFile',{
+                url:'/ng-file-upload',
+                templateUrl:'partials/ng-upload-file.html',
+                controller: 'ngFileUploadController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/uploadNgFileController', 
+                            ])
+                        }
+
+            }).
+            state('catalog-list',{
+                url:'/catalog-list',
+                templateUrl:'partials/catalog-list.html',
+                controller: 'catalogListMainController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/catalogListMainController', 
+                            ])
+                        }
+
             })
+
+            
         }]);
 
     app.factory('myInterceptor', ['$q', '$location', function($q, $location) {
