@@ -40,11 +40,45 @@
                     </div>
                 </div>   
             </div>
-            <div ng-show="commentPart">
-                2222
+            <div ng-show="commentPart" class="commentPart">
+                <div class="comment-top clearfix">
+                    <div class="comment-area">
+                        <textarea class="form-textarea-comment grayDark" placeholder="我来说两句..." style="margin-top: 0px; margin-bottom: 0px; height: 91px;"></textarea>
+                    </div>
+                    <div class="comment-btn">
+                        <button class="btn btn-green">发表评论</button>
+                    </div>
+                </div>
+                <div class="comment-content course-evaluate">
+                    <div class="evaluat-class clearfix">
+                        <div class="evaluate-item ">
+                           <a href="#" class="img-box">
+                                <img src="http://img.mukewang.com/545863f50001df1702200220-100-100.jpg" alt="fjnick">
+                            </a>
+                            <div class="evaluate-content">
+                                <span class="evaluate-des">hahahahhahahahhahahahh</span>
+                                <span class="evaluate-time">time:2016-12-12</span>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div ng-show="answerPart">
-                3333
+            <div ng-show="answerPart" class="question-answer">
+                <div class="answer-question">
+                    <div class="question-title"> 
+                    <span class="ques-label">标题：</span>
+                    <div class="ques-detail question-area">
+                        <input type="text" class="custom-question-width ques-input">
+                    </div>
+                    </div>
+                    <div class="question-content"> 
+                        <span class="ques-label">内容：</span>
+                        <div class="editor"  >
+                            <div class="ueditor"  ng-model="content" style="width:1000px;height:240px;" ></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>    
 

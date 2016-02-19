@@ -9,7 +9,8 @@ define([
     'directives/listDirective',
     'directives/demoDirective',
     'directives/tabsDirective',
-    'directives/toTopDirective'
+    'directives/toTopDirective',
+    'angularUeditor'
     ], function(angular, angularLazyLoad){
     var app = angular.module('Ag',[
         'ui.router', 
@@ -19,6 +20,7 @@ define([
         'Ag.directive',
         'ui.bootstrap',
         'ngFileUpload',
+        'ng.ueditor'
         ]);
     
     //lazy load

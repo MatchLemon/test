@@ -10,7 +10,10 @@ require.config({
         angularFileUpload: jsUrl + 'angular-file-upload',
         md5:jsUrl +'md5.min',
         uiBootStrap: jsUrl + 'ui-bootstrap-tpls.min',
-        ngFileUpload: jsUrl +"ng-file-upload-bower-12.0.1/ng-file-upload"
+        ngFileUpload: jsUrl + "ng-file-upload-bower-12.0.1/ng-file-upload",
+        UEditor:jsUrl + "umeditor/umeditor",
+        UEditorConfig:jsUrl + "umeditor/umeditor.config",
+        angularUeditor: jsUrl + "angular-ueditor/dist/angular-ueditor"
     },
     shim: {
             angular: {
@@ -20,7 +23,10 @@ require.config({
             angularLazyLoad: ['angular'],
             uiBootStrap: ['angular'],
             angularFileUpload:['angular'],
-            ngFileUpload:['angular']
+            ngFileUpload:['angular'],
+            UEditor:['jquery', 'UEditorConfig'],
+            angularUeditor:['angular', 'UEditor']
+
         },
     deps:['bootStrap']
 });
