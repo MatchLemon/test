@@ -201,6 +201,16 @@ define([
         $(".")
     }
 }
-
+    
+    
+/*app.directive("required",[function(){
+    return function(scope, elem, attr){
+        $(elem).on("focus",function(){
+            if($(elem).find("option").length==0){
+                window.scrollTo(0,100);
+            }
+        })
+    }
+}]);*/
 return app;
 });

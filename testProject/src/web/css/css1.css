@@ -511,3 +511,8 @@ display: inline;
     overflow: hidden;
     padding-top: 10px;
 }
+.question-content .editor {
+    float: left;
+    width: 90%;
+    margin-top: 10px;
+}

@@ -11,9 +11,10 @@ require.config({
         md5:jsUrl +'md5.min',
         uiBootStrap: jsUrl + 'ui-bootstrap-tpls.min',
         ngFileUpload: jsUrl + "ng-file-upload-bower-12.0.1/ng-file-upload",
-        UEditor:jsUrl + "umeditor/umeditor",
-        UEditorConfig:jsUrl + "umeditor/umeditor.config",
-        angularUeditor: jsUrl + "angular-ueditor/dist/angular-ueditor"
+        UEditor:jsUrl + "umeditor/ueditor.all",
+        UEditorConfig:jsUrl + "umeditor/ueditor.config",
+        angularUeditor: jsUrl + "angular-ueditor/angular-ueditor",
+        Ulong: jsUrl + "umeditor/lang/zh-cn/zh-cn",
     },
     shim: {
             angular: {
@@ -24,11 +25,16 @@ require.config({
             uiBootStrap: ['angular'],
             angularFileUpload:['angular'],
             ngFileUpload:['angular'],
-            UEditor:['jquery', 'UEditorConfig'],
-            angularUeditor:['angular', 'UEditor']
+            UEditor:{
+                deps:['UEditorConfig']
+            
+            },
+            angularUeditor:{
+                 deps:['angular', 'UEditor']
+            }
 
         },
-    deps:['bootStrap']
+    deps:['bootStrap', 'angularUeditor','UEditorConfig']
 });
  
 /*require(['jquery'], function($) {
