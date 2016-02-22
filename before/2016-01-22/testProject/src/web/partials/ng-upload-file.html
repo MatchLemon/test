@@ -1,0 +1,81 @@
+<style type="text/css">
+    
+    .progress-style{
+        height: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    }
+    .progress-bar {
+        float: left;
+        width: 0;
+        height: 100%;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        background-color: #428bca;
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+        -webkit-transition: width .6s ease;
+        transition: width .6s ease;
+    }
+    tr>td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+</style>
+<h1>ngUploadFile</h1>
+<div align="center">
+<!--   <ul>
+<li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$errorParam}}
+    <div style="width:500px; height:30px;" class="progress-style">
+        <div  class="progress-bar" ng-style="{width:f.progress + '%'}"></div>
+        
+    </div>
+    <span class="progress" ng-show="f.progress >= 0">
+        <div style="width:{{f.progress}}%"  
+            ng-bind="f.progress + '%'"></div>
+    </span>
+</li>
+<li ng-repeat="f in errFiles" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}
+</li> 
+</ul>  -->
+<div align="left">  
+    <button ngf-select="uploadFiles($files, $invalidFiles)" multiple
+           ngf-max-height="1000" ngf-max-size="1000MB" class="btn btn-green">
+      Select Files</button>
+       <button ng-click="uploadAll()" class="btn btn-green">Upload All</button>
+       <input type="text" ng-model="path">
+</div>
+    <table>
+        <tr>
+            <td width="100px">name</td>
+            <td  width="30px">size</td>
+            <td width="300px">progress</td>
+            <td>Actions</td>
+        </tr>
+        <tr ng-repeat="f in files" >
+            <td>{{f.name}}</td>
+            <td>{{ f.size/1024/1024|number:2 }} MB</td>
+            <td>
+                <div style="width:500px; height:30px;" class="progress-style">
+                    <div  class="progress-bar" ng-style="{width:f.progress + '%'}">
+                        
+                    </div>
+            
+                </div>
+            </td>
+            <td>
+                <button ng-click=uploadFile(f)  class="btn btn-green" style="font-size: 12px;padding: 2px 10px;">upload</button>
+            </td>
+
+        </tr>
+    </table>
+
+</div>

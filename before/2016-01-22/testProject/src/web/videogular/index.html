@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Videogular - Simplest Example</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div ng-app="myApp">
+  <div ng-controller="HomeCtrl as controller" class="videogular-container">
+    <videogular vg-theme="controller.config.theme.url">
+      <vg-media vg-src="controller.config.sources" vg-tracks="controller.config.tracks" vg-native-controls="true">
+      </vg-media>
+    </videogular>
+  </div>
+</div>
+
+<script src="module/bower/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.min.js"></script>
+<script src="videogular/dist/videogular/latest/videogular.jsvideogular.js"></script>
+    
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

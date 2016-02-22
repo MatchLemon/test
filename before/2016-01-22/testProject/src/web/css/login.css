@@ -1,0 +1,163 @@
+#login-page .login-title {
+    background-color: #f7f7f7;  
+    border: 1px solid #ddd;
+    border-width: 1px 1px 0 1px;
+    border-bottom: 0;
+}
+#login-page .login-close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+}
+#login-page .login-close-btn{
+    width: 16px;
+    height: 16px;
+    outline: none;
+    display: block;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+#login-page .title-text{
+    width: auto;
+    height: 18px;
+    font-size: 16px;
+    font-family: 宋体;
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+    text-indent: 50px;
+    padding: 15px 0px 13px;
+    margin-right: 29px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    box-sizing: content-box;
+}
+ .login-close-btn.close-btn{
+    background: url("../images/icon.png");
+    background-position: -56px -48px;
+}
+#login-page .login-body{
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    border-width: 0 1px 1px 1px;
+    height: 270px;
+}
+
+a.close-btn:hover {
+    background-position: -72px -48px;
+}
+
+.right-box{
+    float: right;
+    width: 250px;
+    margin-right: 20px;
+    padding-top: 50px;
+}
+.pass-label-userName{
+    background: url("../images/login-icon.png");
+    background-position: 0 -68px;
+}
+
+input.pass-text-input-userName, input.pass-text-input-password {
+    width: 250px;
+    padding-left: 38px;
+}
+
+.pass-label-userName{
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background-repeat: no-repeat;
+    z-index: 20;
+}
+ .pass-text-input {
+    display: block;
+    position: relative;
+   /*  //height: 16px; */
+    padding: 12px 10px 12px 10px;
+    border: 1px solid #ddd;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    font-size: 14px;
+    color: #666;
+}
+.pass-label-password{
+    background: url("../images/login-icon.png");
+    background-position: 0 -147px;
+}
+.pass-label-password{
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background-repeat: no-repeat;
+    z-index: 20;
+}
+.label-input{
+    position: relative;
+    margin-bottom: 10px;
+}
+.pass-checkbox-label {
+    display: inline;
+    color: #666;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.pass-checkbox-memberPass {
+    vertical-align: middle;
+}
+.pass-fgtpwd{
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(27, 102, 199);
+    font-family: Arial, Helvetica, STHeiti, 宋体;
+    position: absolute;
+    top: 0px;
+    right: 0;
+
+}
+.pass-button-submit{
+
+    width: 250px;
+    height: 48px;
+}
+.pass-reglink{
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(27, 102, 199);
+    font-family: Arial, Helvetica, STHeiti, 宋体;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.nav-iamge{
+    background: url(../images/sabj1.png) no-repeat;
+    background-position: center 20%;
+    background-position-x: 50%;
+    background-position-y: 20%;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.login-backgrount{
+     background: url(../images/image1.jpg) no-repeat;
+    background-position: center 20%;
+    background-position-x: 50%;
+    background-position-y: 20%;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
