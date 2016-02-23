@@ -219,3 +219,107 @@ input {
     border-radius: 7px;
     border: 1px solid #ddd;
 }
+
+/* ====================video style==================== */
+.video-style{
+    width: 100%;
+    height: 500px;
+}
+.video-main .progress-speed {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background-color: #428bca;
+}
+.video-player .progress-point{
+    position: relative;
+    float: right;
+    width: 10px;
+    height: 20px;
+    background: yellow;
+    right: -10px;
+}
+.video-player .video-controls {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background: url("../images/video-bottom.png") 50% 50% / 1px 40px repeat-x;
+    background-repeat: repeat-x;
+    height: 40px;
+}
+.video-player .bar-progress {
+    width: 80%;
+    height: 15px;
+    margin-top: 10px;
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+}
+.video-player .btn-play {
+   float: left;
+   margin-top: 6px;
+   margin-right: 30px;
+   width: 24px;
+   height: 24px;
+   margin-left: 10px;
+   display: inline-block;
+   background: url("../images/player-stop.png") no-repeat;
+   background-size: contain;
+}
+.video-player .btn-play-pause {
+    background: url("../images/player-start.png") no-repeat;
+    background-size: contain;
+}
+.video-player .btn-volume{
+    float: left;
+    margin-right: 30px;
+    width: 24px;
+    height: 40px;
+    margin-left: 10px;
+    display: inline-block;
+    background: url("../images/player-volume.png") no-repeat;
+    background-size: contain;
+    background-position-y: 7px;
+    cursor: pointer;
+}
+.video-player .bar-volume {
+   position: relative;
+   width: 32px;
+   top: -100px;
+   height: 100px;
+   left: -3px;
+   background: #000000;
+   border-radius: 3px;
+   padding-top: 5px;
+}
+ .video-player .volume-progress {
+   height: 100%;
+   width: 7px;
+   margin: auto;
+   background: #c8c9ca;
+   border-radius: 3px;
+   position: relative;
+
+}
+.video-player .progress-bar {
+    width: 100%;
+    background: #3579a6;
+    height: 20%;
+    position: absolute;
+    bottom: 0px;
+}
+.video-player .volume-progress-point{
+    width: 11px;
+    height: 5px;
+    left: -2px;
+    background: yellow;
+    position: relative;
+}
+.volume-visibility{
+    visibility: hidden;
+}
+
+

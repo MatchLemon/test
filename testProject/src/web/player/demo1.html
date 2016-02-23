@@ -1,5 +1,4 @@
-<!DOCTYPE html >
-<html >
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=Utf-8" />
 <title>极酷阳光播放器(CuSunPlayerV2.5)版_酷播官方演示</title>
@@ -133,7 +132,30 @@ function getNext (pars){
 <p><input type="submit" id="pause" name="pause" onClick="postPlaytime('60');" value="指定点播放：第60秒" class="btn2"/>&nbsp;
 <input type="submit" id="pause" name="pause" onClick="postPlaytime('125');" value="指定点播放：125秒" class="btn2"/>&nbsp;
 <input type="submit" id="pause" name="pause" onClick="postPlaytime('208');" value="指定点播放：208秒" class="btn2"/>&nbsp;</p>
-<video id="lesson_video_html5_api" class="vjs-tech" preload="auto" src="12-04-44-1901044381.mp4" width="300" height="200"></video>
+<video id="test-video" class="vjs-tech" src="test.flv" width="300" height="200" controls="controls"></video>
+
+<video id="media" src="http://its.resource.augmentum.com.cn:8013/its/
+2015-02/2015-02-13-08-38-35-410354619.mp4" controls width="400px" heigt="400px"></video>  
+  //audio和video都可以通过JS获取对象,JS通过id获取video和audio的对象
+
+<p><input type="button" id="cpause" name="pause" value="CurrentTime" class="btn2"/>
+<script type="text/javascript">
+    
+$(function(){
+     var pause = $("#test-video");
+     console.log(pause);
+     console.log(pause.duration);
+    $("#cpause").click(function(){
+        var pause = document.getElementById("test-video"); 
+               console.log(pause.currentTime); 
+
+    });
+
+      Media = document.getElementById("media"); 
+      Media.currentTime = 10;
+})
+
+</script>
 </body>
 </html>
 

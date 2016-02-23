@@ -476,11 +476,13 @@ display: inline;
     border-bottom: 1px solid #d3dce0;
     padding-bottom: 30px; 
 }
-.commentPart .comment-btn{
+.commentPart .comment-btn, .question-content .comment-btn{
     float: right;
     margin-top: 10px;
 }
+
 /* answer part */
+
 .ques-detail .ques-input {
     padding: 12px 8px;
     vertical-align: middle;
@@ -515,4 +517,41 @@ display: inline;
     float: left;
     width: 90%;
     margin-top: 10px;
+    min-width: 540px;
+    height:110px;
+}
+.catalog-list-answer .course-left-box{
+    width: 240px;
+    display: inline-block;
+    height: 200px;
+}
+.catalog-list-answer .course-right-box{
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    margin-left: 10px
+}
+.catalog-list-answer .start-course-btn{
+    width: 240px;
+    font-size: 23px;
+}
+.catalog-list-answer .course-about-detail {
+      padding: 20px;
+      border: 1px solid #d0d6d9;
+      margin-bottom: 40px;
+      margin-top: 20px;
+}
+.catalog-list-answer .about-course{
+    font-weight: bold;
+    font-size: 18px
+}
+.about-content {
+    font-size: 15px
+}
+
+/* ===================course-video====================== */
+.course-video {
+    width: 100%;
+    padding: 10px 10%
+
 }

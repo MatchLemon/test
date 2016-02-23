@@ -10,6 +10,7 @@ define([
     'directives/demoDirective',
     'directives/tabsDirective',
     'directives/toTopDirective',
+    'directives/videoDirective',
     'angularUeditor'
     ], function(angular, angularLazyLoad){
     var app = angular.module('Ag',[
@@ -149,6 +150,17 @@ define([
                         resolve: {
                             l: $couchPotatoProvider.resolveDependencies([
                                 'controller/catalogListMainController', 
+                            ])
+                        }
+
+            }).
+            state('video',{
+                url:'/video',
+                templateUrl:'partials/video.html',
+                controller: 'videoController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/videoController', 
                             ])
                         }
 

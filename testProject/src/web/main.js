@@ -16,6 +16,7 @@ require.config({
         angularUeditor: jsUrl + "angular-ueditor/angular-ueditor",
         Ulong: jsUrl + "umeditor/lang/zh-cn/zh-cn",
     },
+    waitSeconds:0,
     shim: {
             angular: {
                 exports: 'angular'
@@ -34,7 +35,7 @@ require.config({
             }
 
         },
-    deps:['bootStrap', 'angularUeditor','UEditorConfig']
+    deps:['bootStrap']
 });
  
 /*require(['jquery'], function($) {
