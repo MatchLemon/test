@@ -249,6 +249,7 @@ input {
     background: url("../images/video-bottom.png") 50% 50% / 1px 40px repeat-x;
     background-repeat: repeat-x;
     height: 40px;
+    /* overflow: hidden; */
 }
 .video-player .bar-progress {
     width: 80%;
@@ -275,7 +276,6 @@ input {
 }
 .video-player .btn-volume{
     float: left;
-    margin-right: 30px;
     width: 24px;
     height: 40px;
     margin-left: 10px;
@@ -320,6 +320,24 @@ input {
 }
 .volume-visibility{
     visibility: hidden;
+}
+.video-current-time {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    float: left;
+    text-align: center;
+    color: #ffffff;
+    line-height: 40px;
+}
+.player-maxi {
+   background: url("../images/player-max.png") no-repeat;
+   display: inline-block;
+   width: 30px;
+   height: 40px;
+   background-size: contain;
+   background-position-y: 5px;
+   margin-left: 10px;
 }
 
 

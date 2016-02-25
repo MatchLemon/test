@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MP4 video file</title>
+    <script type="text/javascript" src="./bin-debug/jwplayer.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/tests.css"  media="all" />
+</head>
+<body>
+
+<div id="video-container">before set up</div>
+    <script type="text/javascript">
+        (function(jwplayer) {
+           
+            jwplayer('video-container').setup({         
+                file: 'http://its.resource.augmentum.com.cn:8013/its/M00/00/00/rBQCZFOD8d6ATGELCJWAZGFH7qA856.mp4',         
+                width: '640',          
+                height: '480'    
+            });
+
+        })(window.jwplayer);
+    </script>
+</body>
+</html>
