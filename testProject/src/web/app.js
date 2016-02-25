@@ -11,6 +11,7 @@ define([
     'directives/tabsDirective',
     'directives/toTopDirective',
     'directives/videoDirective',
+    'directives/videoJWDirective',
     'angularUeditor'
     ], function(angular, angularLazyLoad){
     var app = angular.module('Ag',[

@@ -21,10 +21,10 @@ define(['directives/baseDirective'],function(module){
                 //scope.videoParams.videoURL = "http://its.resource.augmentum.com.cn:8013/its/M00/00/00/rBQCZFOD8d6ATGELCJWAZGFH7qA856.mp4";
                 //"../player/test.flv"
                 media = $(elem).find('video').get(0);
-                var ddd= $(elem).find('video');
-                ddd.requestFullScreen();
+/*                var ddd= $(elem).find('video');
+               ddd.requestFullScreen();
                 launchFullscreen(media) ;
-                console.log($(elem).find('video').trigger("fullscreen"));
+                console.log($(elem).find('video').trigger("fullscreen"));*/
                 media.src= scope.videoParams.videoURL;
                 $("#volume-progress").css({"height":(media.volume*100)+"%"});
                 $barPoint = ($(elem).closest('.video-player').find(".progress-point"));

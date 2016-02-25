@@ -15,6 +15,7 @@ require.config({
         UEditorConfig:jsUrl + "umeditor/ueditor.config",
         angularUeditor: jsUrl + "angular-ueditor/angular-ueditor",
         Ulong: jsUrl + "umeditor/lang/zh-cn/zh-cn",
+        jwplayer:jsUrl + "jwplayer-7.3.3/jwplayer"
     },
     waitSeconds:0,
     shim: {
