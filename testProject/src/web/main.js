@@ -13,13 +13,13 @@ require.config({
         ngFileUpload: jsUrl + "ng-file-upload-bower-12.0.1/ng-file-upload",
         UEditor:jsUrl + "umeditor/ueditor.all",
         UEditorConfig:jsUrl + "umeditor/ueditor.config",
-        angularUeditor: jsUrl + "angular-ueditor/angular-ueditor",
+        angularUeditor: jsUrl + "angular-ueditor/dist/angular-ueditor.min",
         Ulong: jsUrl + "umeditor/lang/zh-cn/zh-cn",
-        jwplayer:jsUrl + "jwplayer-7.3.3/jwplayer"
+        jwplayer:jsUrl + "jwplayer-7.3.3/jwplayer",
     },
-    waitSeconds:0,
     shim: {
             angular: {
+                deps:['jquery'],
                 exports: 'angular'
             },
             angularUIRouter: ['angular'],
@@ -27,13 +27,8 @@ require.config({
             uiBootStrap: ['angular'],
             angularFileUpload:['angular'],
             ngFileUpload:['angular'],
-            UEditor:{
-                deps:['UEditorConfig']
-            
-            },
-            angularUeditor:{
-                 deps:['angular', 'UEditor']
-            }
+            UEditor:['jquery','UEditorConfig'],
+            angularUeditor: ['angular', 'UEditor']
 
         },
     deps:['bootStrap']

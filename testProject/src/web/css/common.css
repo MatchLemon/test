@@ -23,7 +23,6 @@
 }
 body{
     font-size: 14px;
-    min-width: 700px;
       font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
 }
 
@@ -340,4 +339,25 @@ input {
    margin-left: 10px;
 }
 
-
+/* =============commen border========== */
+.panel-bg{
+    background-color: #fff;
+    padding: 2px;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-style: solid;
+}
+.panel-title {
+    color: #fff;
+    background-color: #337ab7;
+    border-radius: 4px;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 17px;
+}
+/* 
+    background: #d9edf7;//qian lan
+ */

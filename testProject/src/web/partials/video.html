@@ -1,38 +1,83 @@
 <div class="course-video">
-    <div class="video-main">
-        <div class="video-player" heyman-video get-current-time="currentTime1">
-             <video id="video-media" class="video-style" src="../player/test.flv" controls ></video>
-            <div class="video-controls">
-                <span class="btn-play"></span>
-                <span class="video-current-time" ng-bind="currentTime">
-                    00:00
-                </span>
-                <div class="progress-style pregress-height bar-progress">
-                      <div class="progress-speed" id="progress-current">
-                        <span class="progress-point"></span>
-                    </div>
-                </div> 
-                <span class="btn-volume ">
-                    <div class="bar-volume volume-visibility">
-                        <div class="volume-progress">
-                            <div class="progress-bar" id="volume-progress">
-                                <div class="volume-progress-point">
-                                
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </span>
-                <span class="player-maxi"></span>
-            </div>
-        </div>
-
-      
+    <div heyman-jwplayer video="videoParams">
+        <div id="video-container"></div>
     </div>
-     <div heyman-jwplayer>
-         <div id="video-container"></div>
-     </div>
-    <div class="vido-content">
-        
+    <div class="video-content clearfix"  >
+        <div class="box-left panel-bg">
+            <div class="content">
+                   <div class="mod-tab-menu">
+                      <div cl-tabs tabs="tabs" change-tab="changTab()"></div>
+                       </div>
+               </div>
+               <div ng-show="catalogListPart" class="chapters">
+                   <div class="mod-chapters">
+                       <div class="chapter chapter-active">
+                           <h3>
+                               <span class="icon-sub"></span> 
+                               <strong>
+                                   <i class="state-expand-icon"></i>
+                                   第1章 MongoDB在线讲座系列之MongoDB DBA的日常巡检及执行计划分析
+                               </strong>
+                           </h3>
+                           <ul class="video clearfix">
+                               <li>
+                                   <a target="_blank" href='/video/10932' class="J-media-item studyvideo">1-1 MongoDB在线讲座系列之MongoDB
+                                       DBA的日常巡检及执行计划分析(一） (26:25) 
+                                       <i class="study-state"></i>
+                                   </a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>   
+               </div>
+               <div ng-show="commentPart" class="commentPart">
+                   <div class="comment-top clearfix">
+                       <div class="comment-area">
+                           <textarea class="form-textarea-comment grayDark" placeholder="我来说两句..." style="margin-top: 0px; margin-bottom: 0px; height: 91px;"></textarea>
+                       </div>
+                       <div class="comment-btn">
+                           <button class="btn btn-green">发表评论</button>
+                       </div>
+                   </div>
+                   <div class="comment-content course-evaluate">
+                       <div class="evaluat-class clearfix">
+                           <div class="evaluate-item ">
+                              <a href="#" class="img-box">
+                                   <img src="http://img.mukewang.com/545863f50001df1702200220-100-100.jpg" alt="fjnick">
+                               </a>
+                               <div class="evaluate-content">
+                                   <span class="evaluate-des">hahahahhahahahhahahahh</span>
+                                   <span class="evaluate-time">time:2016-12-12</span>
+                               
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div ng-show="answerPart" class="question-answer">
+                   <div class="answer-question">
+                       <div class="question-title"> 
+                       <span class="ques-label">标题：</span>
+                       <div class="ques-detail question-area">
+                           <input type="text" class="custom-question-width ques-input">
+                       </div>
+                       </div>
+                       <div class="question-content"> 
+                           <span class="ques-label">内容：</span>
+                           <div class="editor" >
+                               <div class="ueditor"  ng-model="content" ></div> 
+                           </div>
+                           <div class="comment-btn">
+                               <button class="btn btn-green">发表评论</button>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+        </div>
+        <div class="box-right panel-bg ">
+            <span class="panel-title down-title">质料下载</span>
+            
+        </div>
+         
     </div>
 </div>

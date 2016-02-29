@@ -14,8 +14,7 @@ define(['directives/baseDirective'],function(module){
                 scope.currentTime="00:00";
                 scope.videoParams = {
                     "videoURL":"../player/test.flv",
-                    "timerTime":5000,
-
+                    "timerTime":5000
                 };
                 angular.extend(scope.videoParams, scope.video);
                 //scope.videoParams.videoURL = "http://its.resource.augmentum.com.cn:8013/its/M00/00/00/rBQCZFOD8d6ATGELCJWAZGFH7qA856.mp4";

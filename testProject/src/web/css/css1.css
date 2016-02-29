@@ -94,9 +94,24 @@ display: inline;
     display: inline-block;
     float: right;
 }
+/* =========index======== */
+.footer {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   background-color: #2f2f2f;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   width: 100%
+}
+body>.contain{
+    position: relative;
+    min-width: 1150px;
+}
 /* ==================tab================ */
 .scroll-top{
-    bottom: 20px;
+    bottom: 60px;
     right: 20px;
     position: fixed;
     background: url("../images/to-top.png");
@@ -516,9 +531,10 @@ display: inline;
 .question-content .editor {
     float: left;
     width: 90%;
+    width: 680px;
     margin-top: 10px;
     min-width: 540px;
-    height:110px;
+    min-height:110px;
 }
 .catalog-list-answer .course-left-box{
     width: 240px;
@@ -551,7 +567,24 @@ display: inline;
 
 /* ===================course-video====================== */
 .course-video {
-    width: 100%;
-    padding: 10px 10%
+    width: 1000px;
+    /* padding: 10px 10% */
+    margin: 0 auto;
+}
+.course-video .video-content{
+    margin-top: 20px
+    background: url(http://tb2.bdstatic.com/tb/static-spage/img/big-bg_3c7e924.png) repeat-y -4px 0;
+}
+.course-video .box-left{
+    width: 781px;
+    float: left;
+}
+.course-video .box-right{
+    width: 210px;
+    height: 500px;
+    float: right;
 
+}
+.course-video .down-title{
+    display: inline-block;
 }

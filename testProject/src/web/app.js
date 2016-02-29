@@ -12,6 +12,7 @@ define([
     'directives/toTopDirective',
     'directives/videoDirective',
     'directives/videoJWDirective',
+    'directives/activeDirective',
     'angularUeditor'
     ], function(angular, angularLazyLoad){
     var app = angular.module('Ag',[
@@ -162,6 +163,28 @@ define([
                         resolve: {
                             l: $couchPotatoProvider.resolveDependencies([
                                 'controller/videoController', 
+                            ])
+                        }
+
+            }).
+            state('management',{
+                url:'/management',
+                templateUrl:'partials/management/index.html',
+                controller: 'indexController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/management/indexController', 
+                            ])
+                        }
+
+            }).
+            state('management.member',{
+                url:'/member',
+                templateUrl:'partials/management/memberList.html',
+                controller: 'indexController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/management/indexController', 
                             ])
                         }
 
