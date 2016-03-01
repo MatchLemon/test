@@ -1,0 +1,58 @@
+.management .content {
+    width: 100%;
+}
+.management .left-box {
+        width: 17%;
+        height: 500px;
+        float: left;
+}
+.management .right-box {
+        width: auto;
+        float:none;
+        width: 83%;
+        margin:0px; 
+        float:left; 
+        min-height: 10px;
+        padding: 10px 20px;
+}
+.navbar-vertical {
+    background-color: #e2e2e2;
+    display: block;
+    list-style: none;
+    /* margin-bottom: -99999px; */
+    padding: 0 0 99999px;
+}
+.management.management .navbar>li{
+    float: none;
+
+}
+.management .navbar-vertical li.active{
+    background: #fff;
+    margin-top: -1px;
+    padding-top: 1px;
+}
+.management .navbar-vertical li a {
+    border-bottom: 1px solid #ccc;
+    color: #6f6f6f;
+    display: block;
+    padding: 20px 2px;
+    text-decoration: none;
+}
+/* ============member============= */
+.member-list .panel-heading{
+   /*  height: 40px; */
+}
+.panel-heading .right{
+    float: right;
+    padding: 3px 16px;
+    margin-top: 4px;
+}
+.panel-heading>.search{
+    display: inline-block;
+}
+input[type="search"]{
+    height: 30px;
+}
+.form-btn {
+    padding: 20px;
+}

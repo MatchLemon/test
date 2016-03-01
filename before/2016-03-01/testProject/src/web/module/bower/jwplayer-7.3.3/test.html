@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MP4 video file</title>
+    <script type="text/javascript" src="jwplayer.js"></script>
+</head>
+<body>
+
+<div id="video-container">before set up</div>
+<input type="button" onclick="click1()" value="click" />
+    <script type="text/javascript">
+     
+          jwplayer.key = "/AcvjUsjxOJsn+/NiY5ZnfE/k+RzBumwKjBE/Q==" ;
+                 var palyer = jwplayer('video-container').setup({         
+                file: 'test.flv',         
+                width: '640',          
+                height: '480'
+      
+            });
+     
+
+
+           function click1(){
+           console.log(palyer.getDuration());
+           console.log(palyer.getPosition());
+        }
+    </script>
+
+</body>
+</html>

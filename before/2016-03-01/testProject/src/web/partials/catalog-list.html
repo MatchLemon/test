@@ -1,0 +1,97 @@
+<div class="catalog-list-answer">
+    <div class="course-info-main clearfix">
+        <div class="course-left-box">
+            <a href="" class="btn btn-green start-course-btn">Continue</a>
+            <div class="course-about-detail">
+                <span class="about-course">课程简介:</span>
+                <p class="about-content">随着传播技术的跨越发展与受众心理及习惯的变化，新闻工作迎来了重大变革。习近平审时度势，对媒体创新融合做出重大部署,你会学到很多。</p>
+            </div>
+        </div>
+        <div class="course-right-box">
+            <div class="progress-part clearfix">
+                <div>
+                    <span class="finished-title">
+                        Finished:
+                    </span>
+                    <strong>
+                        80%
+                    </strong>
+                </div>
+                <div class="progress-style pregress-height">
+                    <div  class="progress-bar" ng-style="{width:'40%'}"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="mod-tab-menu">
+                   <div cl-tabs tabs="tabs" change-tab="changTab()"></div>
+                    </div>
+            </div>
+            <div ng-show="catalogListPart" class="chapters">
+                <div class="mod-chapters">
+                    <div class="chapter chapter-active">
+                        <h3>
+                            <span class="icon-sub"></span> 
+                            <strong>
+                                <i class="state-expand-icon"></i>
+                                第1章 MongoDB在线讲座系列之MongoDB DBA的日常巡检及执行计划分析
+                            </strong>
+                        </h3>
+                        <ul class="video clearfix">
+                            <li>
+                                <a target="_blank" href='/video/10932' class="J-media-item studyvideo">1-1 MongoDB在线讲座系列之MongoDB
+                                    DBA的日常巡检及执行计划分析(一） (26:25) 
+                                    <i class="study-state"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>   
+            </div>
+            <div ng-show="commentPart" class="commentPart">
+                <div class="comment-top clearfix">
+                    <div class="comment-area">
+                        <textarea class="form-textarea-comment grayDark" placeholder="我来说两句..." style="margin-top: 0px; margin-bottom: 0px; height: 91px;"></textarea>
+                    </div>
+                    <div class="comment-btn">
+                        <button class="btn btn-green">发表评论</button>
+                    </div>
+                </div>
+                <div class="comment-content course-evaluate">
+                    <div class="evaluat-class clearfix">
+                        <div class="evaluate-item ">
+                           <a href="#" class="img-box">
+                                <img src="http://img.mukewang.com/545863f50001df1702200220-100-100.jpg" alt="fjnick">
+                            </a>
+                            <div class="evaluate-content">
+                                <span class="evaluate-des">hahahahhahahahhahahahh</span>
+                                <span class="evaluate-time">time:2016-12-12</span>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="answerPart" class="question-answer">
+                <div class="answer-question">
+                    <div class="question-title"> 
+                    <span class="ques-label">标题：</span>
+                    <div class="ques-detail question-area">
+                        <input type="text" class="custom-question-width ques-input">
+                    </div>
+                    </div>
+                    <div class="question-content"> 
+                        <span class="ques-label">内容：</span>
+                        <div class="editor" >
+                            <div class="ueditor"  ng-model="content"  config="_simpleConfig" ></div> 
+                        </div>
+                        <div class="comment-btn">
+                            <button class="btn btn-green">发表评论</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+    </div>
+    
+</div>

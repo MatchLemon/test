@@ -1,0 +1,17 @@
+<form ng-submit="uploadFile()"><img src={{image}} width="30" height="20" alt="wu tu" ng-model="image">
+    <div id="upload" style="width:100px;height:20px;background:yellow"  ng-file-select ng-file-change="upload($files)" multiple="true" ng-model="file">Click Upload</div>
+    <input type="submit" value="Submit" class="btn btn-success">
+</form>
+<form action="api/Test/upload" method="POST">
+    <input type="text" name="file1">
+    <input type="submit" value="submit">
+
+</form>
+
+<form ng-submit="uploadFileBinary()">
+<h1>uploadFileBinary</h1>
+    <div id="upload" style="width:100px;height:20px;background:yellow"  ng-file-select ng-file-change="upload($files)" multiple="true" ng-model="file">Click Upload</div>
+    <input type="submit" value="Submit" class="btn btn-success">
+</form>
+
+ <a href="#" class="btn btn-green" ng-click="import()" > Import</a>

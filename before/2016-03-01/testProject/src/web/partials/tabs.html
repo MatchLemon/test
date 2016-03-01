@@ -1,0 +1,5 @@
+<ul class="tabs clearfix">
+    <li class="tab" ng-class="{'active':tab.active}" ng-repeat="tab in tabs" ng-click="tabClick($index)">
+        <span ng-bind="tab.name"></span>
+    </li>
+</ul>

@@ -1,0 +1,46 @@
+<div class="member-list">
+    <div class="crumb">
+        <span class="crumb-text">会员列表</span>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="title">查找 \e003</span>
+            <div class="search">
+                <input type="search">
+                <div class=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="title">成员管理</span>
+            <a href="" class="btn btn-green right" ui-sref="management.memberEdit">添加会员</a>
+        </div>
+        <div class="panel-member-list">
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>注册时间</th>          
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>操作</th>
+                </tr>
+                 <tr ng-repeat="s in [1,2,3,4,5,6,7,8,9,10,12,13,14,15]">
+                    <td><input type="checkbox"></td>
+                    <td>{{$index+1}}</td>
+                    <td>heyman</td>
+                    <td><span>2016-20-16 24:00:00</span></td>
+                    <td>919179517@qq.com</td>
+                    <th>12345678978</th>
+                    <th class="edit">
+                    <a href="#" ui-sref="profile.editCourse" class="btn btn-green">编辑</a>
+                         <a href="" class="btn btn-red">删除</a></th>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    
+</div>
