@@ -13,7 +13,7 @@
         margin:0px; 
         float:left; 
         min-height: 10px;
-        padding: 0px 20px;
+        padding: 10px 20px;
 }
 .navbar-vertical {
     background-color: #e2e2e2;
@@ -37,4 +37,22 @@
     display: block;
     padding: 20px 2px;
     text-decoration: none;
+}
+/* ============member============= */
+.member-list .panel-heading{
+   /*  height: 40px; */
+}
+.panel-heading .right{
+    float: right;
+    padding: 3px 16px;
+    margin-top: 4px;
+}
+.panel-heading>.search{
+    display: inline-block;
+}
+input[type="search"]{
+    height: 30px;
+}
+.form-btn {
+    padding: 20px;
 }

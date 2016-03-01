@@ -1,5 +1,17 @@
 define(['directives/baseDirective'],function(module){
 
+    module.directive('required', [ function() {
+        return function(scope, elem, attr) {
+            var $form, $elem;
+            $elem = $(elem);
+            $form = $elem.closest('form');
+            if (!$form.attr('binded')) {
+                $form.attr('binded', true).on('submit', function(e) {
+                   console.log($form.find("input[type=text]").addClass("ng-touched"));
+              });
+            }
+        };
+    }]);
     return module.directive('clTabs',['$location',function($location){
         return {
             restrict:'A',

@@ -188,6 +188,17 @@ define([
                             ])
                         }
 
+            }).
+            state('management.memberEdit',{
+                url:'/memberEdit',
+                templateUrl:'partials/management/edit/memberEdit.html',
+                controller: 'indexController',
+                        resolve: {
+                            l: $couchPotatoProvider.resolveDependencies([
+                                'controller/management/indexController', 
+                            ])
+                        }
+
             })
 
             

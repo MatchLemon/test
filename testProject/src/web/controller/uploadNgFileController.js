@@ -50,8 +50,8 @@ return app.registerController('ngFileUploadController',['$scope','commonService'
       $scope.uploadFile = function(file, errFiles) {
         $scope.errFiles = errFiles;
         file.upload = Upload.upload({
-            url: config.hostnameProt + '/api/SZ/upload?path=' + $scope.path,
-            data: {file: file}
+            url: config.hostnameProt + '/api/CLZ/video/saveVideo?path=' + $scope.path,
+            file: file
         });
 
         file.upload.then(function (response) {

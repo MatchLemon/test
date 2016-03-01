@@ -156,7 +156,7 @@ ul{
     color: #000000;
     border-bottom: 3px solid #000000;
 }
-a, input, button {
+a, input[type=button], button {
     outline: none;
 }
 
@@ -356,7 +356,7 @@ form input.ng-touched.ng-valid{
 }
 
 /* =============commen border========== */
-.panel-bg{
+.panel-bg, .form-item{
     background-color: #fff;
     padding: 2px;
     border-color: #ddd;
@@ -365,6 +365,10 @@ form input.ng-touched.ng-valid{
     -webkit-box-shadow: none;
     box-shadow: none;
     border-style: solid;
+}
+.form-item{
+    margin: 27px 5px;
+    padding: 0px;
 }
 .panel-title {
     color: #fff;
@@ -394,10 +398,14 @@ form input.ng-touched.ng-valid{
     border-color: #ddd;
 }
 
-.panel-default>.panel-heading {
+.panel-default>.panel-heading ,.form-item .form-label{
     color: #333;
     background-color: #f5f5f5;
     border-color: #ddd;
+    padding: 2px 10px;
+}
+.panel-heading>.title{
+    line-height: 36px;
 }
 .table {
     width: 100%;
@@ -431,6 +439,42 @@ th {
     background-color: #dff0d8;
     border-color: #d6e9c6;
 }
+.crumb {
+    padding: 10px 5px;
+    border-bottom: 2px solid #d9e0ea;
+    margin-bottom: 20px;
+}
+.form-item>.item-content{
+    padding: 10px;
+}
+.form-item>.item-content>input{
+    width: 400px;
+    border-color: #ddd;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+.form-item .form-label {
+    line-height: 30px;
+    padding: 5px 15px;
+}
+.form-label>.tip-required:before{
+    content: "*";
+    color: #b42d14
+}
+/*
+    可能有冲突 css form invalid
+ */
+ input.ng-touched.ng-invalid, input.ng-dirty.ng-invalid {
+    border: 1px solid #B42D14;
+    padding: 0.65em 0.333em 0.65em 0.65em;
+        } 
 /* 
     background: #d9edf7;//qian lan
  */
