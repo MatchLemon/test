@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link href="jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript">
+
+    $(function(){
+        $( document ).tooltip({
+            position: {
+                my: "center top+30",
+                at: "center botton",
+                using: function( position, feedback ) {
+                  $( this ).css( position );
+                  $( "<div>" )
+                    .addClass( "arrow" )
+                    .addClass( feedback.vertical )
+                    .addClass( feedback.horizontal )
+                    .appendTo( this );
+                }
+            }
+        });
+
+      $( document ).click(function() {
+          runEffect();
+          return false;
+        });
+
+
+        function  runEffect(){
+          $( "#effect" ).show( "slide", {direction:'up'}, 1000, function(){setTimeout(callback, 800) });
+        }
+
+        $( "#dialog" ).dialog();
+    });
+
+      function callback() {
+     $( "#effect" ).toggle( "slide", {direction:'up'},500);
+    
+    };
+
+
+
+    </script>
+
+<style>
+  .ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+  }
+  .ui-tooltip {
+    padding: 6px 30px;
+    color: white;
+    border-radius: 10px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+  }
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
+
+  </style>
+</head>
+      <body>
+      <div style="height:50px;width:80%; background: yellow;;" align="center" id="effect"></div>
+        <div class="ui-tooltip">
+          <span class="arrow">asdasdasdasdasdassdfsdfsdfsdf</span>
+        </div>
+        <table align="center" width="70%" style="margin-top:100px;" border="1PX">
+            <tr>
+                <td title="11111111111111111111111111111111"> 1</td>
+                <td title="2"> 2</td>
+                <td title="5"> 5</td>
+                <td title="3"> 3</td>
+                <td title="4"> 4</td>
+                <td title="heyman"> heyman</td>
+            </tr>
+        </table>
+          <div id="dialog" title="基本的对话框">
+  <p>这是一个默认的对话框，用于显示信息。对话框窗口可以移动，调整尺寸，默认可通过 'x' 图标关闭。</p>
+</div>
+      </body>
+</html>
