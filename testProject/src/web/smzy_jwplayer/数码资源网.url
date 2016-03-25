@@ -1,0 +1,11 @@
+[DEFAULT]
+BASEURL=http://www.smzy.net/
+[InternetShortcut]
+URL=http://www.smzy.com/
+Modified=C0D7980C68CAC50133
+IconFile=http://www.smzy.net/favicon.ico
+IconIndex=1
+HotKey=0
+IDList=
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2

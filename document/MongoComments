@@ -70,3 +70,8 @@ create database <user>
 
 克隆数据库
  db.cloneDatabase(“127.0.0.1”); 将指定机器上的数据库的数据克隆到当前数据库
+
+查询数据库的数组字段:
+以数组的部分字段查询
+db.member.find({"properties":{"$elemMatch":{"name" : "tel","value" : "0911112222"}},"accountId" : ObjectId("55dd5e5c475df4a12c8b4567")}).pretty()
+db.member.find({"properties":{"$elemMatch":{"name" : "tel","value" : "0911112222"}}}).pretty()
